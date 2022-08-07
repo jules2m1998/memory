@@ -23,7 +23,7 @@
 % ----------------------------------------------------------------------
 % Set the document class
 % ----------------------------------------------------------------------
-\documentclass[12pt]{memoir}
+\documentclass[12pt,a4paper,oneside]{memoir}
 
 % ----------------------------------------------------------------------
 % Define external packages, language, margins, fonts, new commands 
@@ -31,6 +31,10 @@
 % ----------------------------------------------------------------------
 \usepackage[utf8]{inputenc} % Codification
 \usepackage[english, french]{babel} % Writing idiom
+
+\usepackage{float}
+
+\addto\captionsfrench{\def\tablename{Tableau}}
 
 \usepackage[export]{adjustbox} % Align images
 \usepackage{amsmath} % Extra commands for math mode
@@ -45,11 +49,9 @@
 \usepackage{fancyhdr} % Head note and footnote
     \pagestyle{fancy}
     \fancyhf{}
-    \fancyhead[L]{\footnotesize IST} % Left of Head note
-    \fancyhead[R]{\footnotesize ULisboa} % Right of Head note
-    \fancyfoot[L]{\footnotesize Course} % Left of Footnote
-    \fancyfoot[C]{\thepage} % Center of Footnote
-    \fancyfoot[R]{\footnotesize Degree} % Right of Footnote
+    \fancyhead[C]{\footnotesize Analyse et conception d’un module d’apprentissage de la chimie dans un environnement immersif basé sur la réalité virtuelle } % Left of Head note
+    \fancyfoot[L]{\footnotesize Rédigé et Présenté par MEVA'A JULES JUNIOR.} % Left of Footnote
+    \fancyfoot[R]{\thepage} % Center of Footnote
     \renewcommand{\footrulewidth}{0.4pt} % Footnote rule
 \usepackage{float} % Utilization of [H] in figures
 \usepackage{graphicx} % Figures in LaTeX
@@ -57,19 +59,42 @@
 \usepackage{indentfirst} % First paragraph
 \usepackage{siunitx} % SI units
 
+
+\providecommand{\keywords}[2]{\textbf{\textit{#1 ---}} #2}
 % Random text (not needed)
 \usepackage{lipsum}
 \usepackage{duckuments}
 
+\usepackage{afterpage}
+
+% Chapter display
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+
+% Array
+\usepackage{array,multirow,makecell}
+\usepackage{tabularx}
+\setcellgapes{1pt}
+\makegapedcells
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash }b{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash }b{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash }b{#1}}
+
 % New and re-newcommands
-\newcommand{\sen}{\operatorname{\sen}} % Sine function definition
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Specific rule definition
-\renewcommand{\appendixpagename}{\LARGE Appendices}
+% \newcommand{\sen}{\operatorname{\sen}} % Sine function definition
+% \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Specific rule definition
+% \renewcommand{\appendixpagename}{\LARGE Appendices}
+
 
 % Colors
-%\definecolor{istblue}{RGB}{3, 171, 230}
-%\definecolor{dkgreen}{rgb}{0,0.6,0}
-%\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{istblue}{RGB}{3, 171, 230}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+
+\setsecnumdepth{subsection}
+\setsecnumdepth{subsubsection}
+\setsecnumdepth{paragraph}
+\setsecnumdepth{subparagraph}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                 Document                             %
@@ -77,9 +102,25 @@
 \begin{document}
 
 \include{pages/dedicace}
+
 \include{pages/remerciement}
 
 \renewcommand\contentsname{Sommaire}
 \tableofcontents % Table des matières
 
+\include{pages/resume}
+\include{pages/abstract}
+\include{pages/introduction}
+\include{pages/partie1}
+\include{pages/partie2}
+\include{pages/conclusion}
+
+% \LaTeX{} \cite{li20203d}
+
+\nocite{*}
+\bibliographystyle{plain} % We choose the "plain" reference style
+\bibliography{refs} % Entries are in the refs.bib file
+\clearpage
+\setcounter{tocdepth}{3}
+\tableofcontents % Table des matières
 \end{document}

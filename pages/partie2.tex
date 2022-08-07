@@ -1,0 +1,669 @@
+\part{RÉALISATION}
+
+\chapter{Analyse et conception}
+
+\section{Analyse de la solution}
+
+\section{Cadrage du projet}
+
+\subsection{Le projet}
+
+\subsubsection{Le nom}
+
+Le projet à réaliser consiste à pouvoir dispenser les cours (médecine, mathématiques, chimie)
+du système éducatif et le travail portera sur le module d’apprentissage de la chimie, d’où le
+nom \textbf{vredu chemistry lab}.
+
+\subsubsection{Définition succincte}
+
+\textbf{vredu chemistry lab} sera développée pour la plateforme de réalité virtuelle et les navigateurs web. Elle se devra donc d’être compatible non seulement avec tous les casques de réalité virtuelle de la marque OCULUS mais aussi avec tous les appareils disposant d’un navigateur web. Il sera ainsi possible pour un enseignant de programmer une expérience chimique sur un navigateur web afin que l'apprenant puisse la suivre sur son casque de réalité virtuelle.
+
+\subsubsection{Caractéristiques essentielles}
+
+Notre application sera caractérisée par :
+
+\begin{itemize}
+	\item Une Accessibilité sur tous les formats d’équipements numériques de la marque oculus et sur les appareils disposant d’un navigateur web,
+	\item Prise en charge des éléments permettant d’effectuer une réaction chimique (éléments du tableau périodique, éprouvettes, béchers, centrifugeuses…).
+\end{itemize}
+
+\subsubsection{Motifs qui sous-tendent ce projet}
+
+De nos jours, l’univers numérique offre énormément d'opportunités en ce qui concerne l'acquisition de connaissance grâce à la grande quantité d’information échangée. La chimie est une science dont l'apprentissage se fait de façon expérimentation, expériences entourées de contraintes auxquelles une solution digitale pourrait être la solution à savoir :
+
+\begin{itemize}
+	\item Annuler la contrainte du lieu des expérience.
+	\item Annuler la contrainte liée à l’acquisition et à la maintenance du matériel d'expérimentation.
+	\item Limitation des risques d’accidents. Durant les expérimentations.
+	\item Diminution des couts de maintenance et d’acquisition du matériel de laboratoire.
+\end{itemize}
+
+\subsection{Les objectifs}
+
+\subsubsection{Objectifs techniques}
+\begin{itemize}
+	\item \textbf{\underline{Résultats attendus}} : A la fin de ce projet, nous devons avoir deux applications, une pour le web permettant à un enseignant de chimie la création de réaction chimiques auxquelles les apprenants participent par le billet de la seconde application qui elle tournera dans un environnement immersif virtuel.
+	\item \textbf{\underline{Objectif principal}} : Obtenir un laboratoire de chimie virtuelle permettant la simulation des réactions chimiques.
+	\item \textbf{\underline{Objectifs secondaires}} :
+	      \begin{itemize}
+		      \item Représentation des réactifs et des produits en trois dimensions
+		      \item Calcul des quantités de matière des réactifs dans une solution
+		      \item Calcul de la concentration des réactifs dans une solution
+		      \item Calcul de la masse molaire moléculaire des réactifs dans une solution
+		      \item Calcul du ph d’une solution
+	      \end{itemize}
+\end{itemize}
+
+\subsubsection{Objectifs de délai}
+
+L’application doit être réalisée dans un délai de sept mois à compter de la date du 10 mai 2022.
+
+\subsubsection{Objectifs de coûts}
+
+\paragraph{Estimation de la main d’œuvre}
+
+
+\begin{enumerate}
+	\item \textbf{Les différents modèles d'estimation des coûts et ressources d’un projet}
+
+	      Au cours de nos recherches, nous avons trouvé de nombreux modèles d’estimation des coûts et ressources d’un projet. Nous pouvons entre autres parlé de :
+
+	      \begin{enumerate}
+		      \item \textbf{La méthode descendante} : reste extrêmement populaire dans la gestion de projets contemporains. L'expression « top-down » (descendante) signifie que les instructions sont données en amont. Les objectifs du projet sont fixés par la direction.
+		      \item \textbf{La méthode ascendante} : elle se caractérise par une participation proactive de l'équipe dans le processus d'exécution du projet. Les membres de l'équipe sont invités à participer à toutes les étapes du processus de gestion. L'ensemble de l'équipe est amené à décider de la marche à suivre.
+		      \item \textbf{La méthode COCOMO} : (acronyme de l'anglais Constructive Cost Model) est un modèle permettant de définir une estimation de l'effort à fournir dans un développement logiciel et la durée que ce dernier prendra en fonction des ressources allouées.
+	      \end{enumerate}
+
+	      Sachant que la majeure partie du travail est consacrée à la production du logiciel, nous nous inspirons de la méthode COCOMO pour estimer les coûts de la ressource humaine à ce niveau, lesquels coûts seront inclus dans les coûts globaux de la solution envisagée.
+
+	\item \textbf{Le modèles d'estimation des coûts COCOMO}
+
+	      Cocomo (Constructive Cost Model) est un modèle de régression basé sur le LOC, c’est-à-dire le nombre de lignes de code. Il s’agit d’un modèle procédural d’estimation des coûts pour les projets logiciels et souvent utilisé comme processus de prédiction fiable des divers paramètres associés à la réalisation d’un projet, tels que la taille, l’effort, le coût, le temps et la qualité. Il a été proposé par Barry Boehm en 1970 et repose sur l’étude de 63 projets, ce qui en fait l’un des modèles les mieux documentés. Différents modèles de Cocomo ont été proposés pour prédire l’estimation des coûts à différents niveaux, en fonction de la précision et de l’exactitude requises. Tous ces modèles peuvent être appliqués à une variété de projets, dont les caractéristiques déterminent la valeur de constante à utiliser dans les calculs ultérieurs. Ces caractéristiques propres à différents types de systèmes sont mentionnées ci-dessous :
+
+	      \begin{enumerate}
+		      \item \textbf{Organique} – Un projet logiciel est dit de type organique si la taille de l’équipe requise est suffisamment petite, si le problème est bien compris et a été résolu dans le passé et si les membres de l’équipe ont une expérience nominale du problème.
+		      \item \textbf{Semi-détaché} – Un projet logiciel est dit de type semi-détaché si les caractéristiques vitales telles que la taille de l’équipe, l’expérience, la connaissance des différents environnements de programmation se situent entre celles de l’organique et de l’Embedded. Les projets classés comme semi-détachés sont comparativement moins familiers et difficiles à développer par rapport aux projets organiques et nécessitent plus d’expérience et une meilleure orientation et créativité. Ex : Les compilateurs ou différents Systèmes Embarqués peuvent être considérés de type Semi-Détachés.
+		      \item \textbf{Intégré} – Un projet logiciel nécessitant le plus haut niveau de complexité, de créativité et d’expérience entre dans cette catégorie. Un tel logiciel nécessite une taille d’équipes plus importantes que les deux autres modèles et les développeurs doivent également être suffisamment expérimentés et créatives pour développer des modèles aussi complexes.
+	      \end{enumerate}
+
+	      \begin{table}[h!]
+		      \caption {types de projet COCOMO}
+		      \begin{tabularx}{\textwidth} {
+				      | >{\raggedright\arraybackslash}X
+				      | >{\centering\arraybackslash}X
+				      | >{\raggedleft\arraybackslash}X |}
+			      \hline
+			      \textbf{Type de projet} & \textbf{Effort en Homme Mois} & \textbf{Temps de Développement} \\
+			      \hline
+			      ORGANIQUIE              & $2.4(KDSI)^{1.05}$            & $2.5(HM)^{0.38}$                \\
+			      \hline
+			      MEDIAN                  & $3.0(KDSI)^{1.12}$            & $2.5(HM)^{0.35}$                \\
+			      \hline
+			      IMBRIQUÉ                & $3.6(KDSI)^{1.20}$            & $2.5(HM)^{0.32}$                \\
+			      \hline
+		      \end{tabularx}
+	      \end{table}
+
+	      Le projet est estimé à 20 KDSI (nombre de milliers d’instructions source livrées) en mode organique (Il est défini par une innovation minimale, une organisation simple en petites équipes expérimentées).
+
+	      % \widowpenalties 3 10000
+	      % \raggedbottom
+	      \textbf{Formule} :
+	      \[E\footnote{E = Effort en Personne-Mois}=2.4\cdot{KLOCx}^{1.05}\]
+	      \[D\footnote{D = Durée en Mois.}=2.5\cdot E^{0.38}\]
+
+	      \textbf{Application numérique} :
+
+	      \[E=2.4\cdot10^{1.05}\approx27 Personnes/Mois\]
+	      \[D=2.5\cdot 56^{0.38}\approx8 Mois\]
+
+	      \begin{table}[h!]
+		      \caption {Estimation des coûts}
+		      \begin{tabularx}{\textwidth} {
+				      | >{\raggedright\arraybackslash}X
+				      | >{\centering\arraybackslash}X
+				      | >{\centering\arraybackslash}X
+				      | >{\centering\arraybackslash}X
+				      | >{\raggedleft\arraybackslash}X |}
+			      \hline
+			      \textbf{Participant}                    & \textbf{Quantité} & \textbf{Durée en semaine} & \textbf{Cout/Semaine} & \textbf{Cout total} \\
+			      \hline
+			      \textbf{Chef de projet}                 & 1                 & 4                         & 200.000 XAF           & 800.000 XAF         \\
+			      \hline
+			      \textbf{Développeur}                    & 1                 & 32                        & 100.000 XAF           & 3.200.000 XAF       \\
+			      \hline
+			      \textbf{Testeur}                        & 2                 & 1                         & 50.000 XAF            & 50.000 XAF          \\
+			      \hline
+			      \multicolumn{4}{| l |}{\textbf{Total} } & 4.050.000 XAF                                                                               \\
+			      \hline
+		      \end{tabularx}
+	      \end{table}
+\end{enumerate}
+
+\paragraph{Estimation matérielle et logiciel}\mbox{}\\
+
+Ce tableau présente une estimation du matériel selon le besoin et la durée.
+
+\begin{table}[H]
+	\caption{Estimation des coûts matériels}
+
+	\begin{tabular}{ |p{7cm}|p{2cm}|p{3cm}|p{3cm}| }
+		\hline
+		\textbf{Ressource}                                                                                                                                                                                                                                     & \textbf{Nombre de payement} & \textbf{Cout par payement} & \textbf{Total} \\
+		\hline
+		Desktop monté avec les caractéristiques : 32Go de RAM, Une carte graphique Nvidia GeForce GTX 1070, 250Go de disque dur SSD, 1To de disque dur HDD, Processeur Intel core i7 3.60GHz, Boitier et carte graphique predator, Ecran 32 pouces, Clavier HP & 7                           & 23.472 XAF                 & 164.304 XAF    \\
+		\hline
+		1 serveur de développement : 100 Go SSD, 4 Go Ram, Ubuntu 20                                                                                                                                                                                           & 7                           & 80.000 XAF                 & 560.000 XAF    \\
+		\hline
+		1 serveur git: 2Go RAM, 30 Go HDD, Ubuntu 20                                                                                                                                                                                                           & 7                           & 80.000 XAF                 & 560.000 XAF    \\
+		\hline
+		1 casque oculus                                                                                                                                                                                                                                        & 7                           & 80.000 XAF                 & 560.000 XAF    \\
+		\hline
+		Connexion Internet haut débit                                                                                                                                                                                                                          & 7                           & 80.000 XAF                 & 560.000 XAF    \\
+		\hline
+		Rider                                                                                                                                                                                                                                                  & 7                           & 80.000 XAF                 & 560.000 XAF    \\
+		\hline
+		Unreal engine                                                                                                                                                                                                                                          & 7                           & 80.000 XAF                 & 560.000 XAF    \\
+		\hline
+		Webstorm                                                                                                                                                                                                                                               & 7                           & 80.000 XAF                 & 560.000 XAF    \\
+		\hline
+		\multicolumn{3}{| l |}{\textbf{Total} }                                                                                                                                                                                                                & 1.673.304 XAF                                                             \\
+		\hline
+	\end{tabular}
+\end{table}
+
+Le coût du matériel est ainsi estimé à : \textbf{1.673.304 XAF}
+
+Ainsi le coût total du projet est de \textbf{5.723.304 XAF }
+
+\subsection{La technique}
+
+\subsubsection{La base sur laquelle le projet s’appuie}
+
+Nous avons déjà eu à réaliser des projets en informatique et en particulier des applications Web, bien que les applications de réalités virtuelles soient pour nous une nouvelle expérience, nous pensons pouvoir y parvenir grâce la communauté qui est nombreuse et également l’aide des professionnels en stage notamment notre encadreur. De plus, les supports de cours, les enseignants et l’internet (possibilité de documentation) sont des atouts majeurs renforçant cet engagement. Des didacticiels dans des environnement 3D existent déjà, ce qui nous fait encore croire encore plus à la réalisation de ce projet.
+
+\subsubsection{Les difficultés principales de ce projet}
+
+\begin{itemize}
+	\item Apporter du réalisme aux réactions chimiques
+	\item Sécurité de l’application
+\end{itemize}
+
+\subsubsection{Les solutions de repli en cas de problème }
+
+Pour le problème lié au réalisme à apporter aux expériences, nous avons pensé à confier la réalisation des assets 3D à des tiers qui nous rémunèrent.
+
+En ce qui concerne la sécurité de l’application, vu que l’application sera hébergée en ligne nous nous informerons sur les différents risques liés à un tel hébergement et tenterons de les éviter lors de la phase de développement.
+
+\subsection{Le planning}
+
+\subsubsection{Dates clés}
+
+\begin{itemize}
+	\item Date de début : 10 mai 2022
+	\item Date de fin :  03 décembre 2022
+\end{itemize}
+
+\subsubsection{Grandes phases du planning}
+
+Pour la gestion du temps, il existe des méthodes de planification prévisionnelle de projet tel que le diagramme de Gantt. Ce dit diagramme regroupe toutes les tâches, les durées et les ressources ordonnées de manière graduelle permettant à toute l’équipe de suivre son évolution. Il peut être modifié au fur et à mesure en fonction des délais respectés ou pas ainsi que des imprévus. Dans le cadre de notre projet, la planification de nos tâches nous a permis de ressortir le diagramme de Gantt suivant :
+
+
+\begin{table}[H]
+	\caption{Estimation des coûts matériels}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{|lll|l|ll|}
+			\hline
+			\multicolumn{1}{|l|}{\textbf{Phase}}                            & \multicolumn{2}{l|}{\textbf{Taches}}                                    & \textbf{\begin{tabular}[c]{@{}l@{}}Durée\\  en jour\end{tabular}}                  & \multicolumn{1}{l|}{\textbf{Durée en heure}} & \textbf{Prédécesseurs}         \\ \hline
+			\multicolumn{1}{|l|}{\multirow{4}{*}{\textbf{Analyse}}}         & \multicolumn{2}{l|}{Cadrage du projet (A)}                              & 4                                                    & \multicolumn{1}{l|}{36}                      &                                \\ \cline{2-6}
+			\multicolumn{1}{|l|}{}                                          & \multicolumn{2}{l|}{Etude l’existant (B)}                               & 5                                                    & \multicolumn{1}{l|}{45}                      & A                              \\ \cline{2-6}
+			\multicolumn{1}{|l|}{}                                          & \multicolumn{2}{l|}{Elaboration du diagramme des cas d’utilisation (C)} & 3                                                    & \multicolumn{1}{l|}{27}                      & B                              \\ \cline{2-6}
+			\multicolumn{1}{|l|}{}                                          & \multicolumn{2}{l|}{Elaboration des diagrammes de séquence (D)}         & 3                                                    & \multicolumn{1}{l|}{27}                      & B                              \\ \hline
+			\multicolumn{1}{|l|}{\multirow{2}{*}{\textbf{Conception}}}      & \multicolumn{2}{l|}{Elaboration du diagramme de classe (E)}             & 5                                                    & \multicolumn{1}{l|}{45}                      & D,C                            \\ \cline{2-6}
+			\multicolumn{1}{|l|}{}                                          & \multicolumn{2}{l|}{Elaboration du diagramme de déploiement (F)}        & 1                                                    & \multicolumn{1}{l|}{9}                       & D,C                            \\ \hline
+			\multicolumn{1}{|l|}{\multirow{11}{*}{\textbf{Implémentation}}} & \multicolumn{1}{l|}{\multirow{4}{*}{Back end}}                          & Module de gestion des utilisateurs (G)               & 15                                           & \multicolumn{1}{l|}{135} & F   \\ \cline{3-6}
+			\multicolumn{1}{|l|}{}                                          & \multicolumn{1}{l|}{}                                                   & Module de gestion des éléments chimiques (H)         & 12                                           & \multicolumn{1}{l|}{108} & G,E \\ \cline{3-6}
+			\multicolumn{1}{|l|}{}                                          & \multicolumn{1}{l|}{}                                                   & Module de gestion des équipements de laboratoire (I) & 15                                           & \multicolumn{1}{l|}{135} & H   \\ \cline{3-6}
+			\multicolumn{1}{|l|}{}                                          & \multicolumn{1}{l|}{}                                                   & Tests (J)                                            & 2                                            & \multicolumn{1}{l|}{18}  & I   \\ \cline{2-6}
+			\multicolumn{1}{|l|}{}                                          & \multicolumn{1}{l|}{\multirow{4}{*}{Front end}}                         & Module de gestion des utilisateurs (K)               & 15                                           & \multicolumn{1}{l|}{135} & J   \\ \cline{3-6}
+			\multicolumn{1}{|l|}{}                                          & \multicolumn{1}{l|}{}                                                   & Module de gestion des éléments chimiques (L)         & 15                                           & \multicolumn{1}{l|}{135} & K   \\ \cline{3-6}
+			\multicolumn{1}{|l|}{}                                          & \multicolumn{1}{l|}{}                                                   & Module de gestion des équipements de laboratoire (M) & 10                                           & \multicolumn{1}{l|}{90}  & L   \\ \cline{3-6}
+			\multicolumn{1}{|l|}{}                                          & \multicolumn{1}{l|}{}                                                   & Tests (N)                                            & 2                                            & \multicolumn{1}{l|}{18}  & M   \\ \cline{2-6}
+			\multicolumn{1}{|l|}{}                                          & \multicolumn{1}{l|}{\multirow{3}{*}{Interfaces 3D}}                     & Menus et interface d’accueil (O)                     & 10                                           & \multicolumn{1}{l|}{90}  & N   \\ \cline{3-6}
+			\multicolumn{1}{|l|}{}                                          & \multicolumn{1}{l|}{}                                                   & Gestion des réactions chimiques (P)                  & 25                                           & \multicolumn{1}{l|}{225} & N   \\ \cline{3-6}
+			\multicolumn{1}{|l|}{}                                          & \multicolumn{1}{l|}{}                                                   & Tests (Q)                                            & 5                                            & \multicolumn{1}{l|}{45}  & O,P \\ \hline
+			\multicolumn{1}{|l|}{\textbf{Transition}}                       & \multicolumn{2}{l|}{Tests (R)}                                          & 5                                                    & \multicolumn{1}{l|}{45}                      & Q                              \\ \hline
+			\multicolumn{3}{|l|}{\textbf{Total}}                            & \textbf{152}                                                            & \multicolumn{2}{l|}{\textbf{1368}}                                                                                                   \\ \hline
+		\end{tabular}%
+	}
+\end{table}
+
+Ce tableau nous permettra de réaliser notre diagramme Gantt.
+
+\subsubsection{Diagramme Gantt}
+
+Ce diagramme présente le planning général du projet, fait en utilisant le logiciel Gantt Project.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.3\textwidth, angle=-90]{img/gantt}
+	\caption{Diagramme de gantt du projet}
+	\label{fig:mesh1}
+\end{figure}
+
+De ce diagramme, ressort la date de début du projet qui est le 10 mai 2022 et la date de fin le 03 Décembre 2022. La durée du projet est de 156 jours. Le chemin critique est noté en bleu sombre sur ce diagramme.
+
+\subsection{Les moyens}
+
+\subsubsection{Moyens humains}
+
+Ici nous retrouvons l'équipe chargée de la réalisation du module \textbf{Mr. KITIO VOUKENG Christian PATRICK} directeur technique a monglo-technologie et \textbf{MEVA’A JULES JUNIOR} stagiaire en développement et en management des solutions digitales et datas a monglo-technologie.
+
+\subsubsection{Moyens matériels}
+
+\begin{table}[H]
+	\centering
+	\caption{Moyens matériels}
+	\label{tab:my-table}
+	\begin{tabular}{|l|p{7cm}|}
+		\hline
+		\multicolumn{1}{|l|}{Ordinateurs desktop} & 32Go de RAM, Une carte graphique Nvidia GeForce GTX 1070, 250Go de disque dur SSD, 1To de disque dur HDD, Processeur Intel core i7 3.60GHz, Boitier et carte graphique predator, Ecran 32 pouces, Clavier HP \\ \hline
+		\multicolumn{2}{|l|}{\begin{tabular}[c]{@{}l@{}}1 Casque de réalité virtuelle Oculus \\ Quest\end{tabular}}                                                                                                                                                                                                         \\ \hline
+		\multicolumn{2}{|l|}{1 serveur git}                                                                                                                                                                                                                      \\ \hline
+		\multicolumn{2}{|l|}{1 serveur git}                                                                                                                                                                                                                      \\ \hline
+	\end{tabular}
+\end{table}
+
+\subsection{Le management du projet}
+
+Pour la réalisation de ce projet, nous disposons des ressources humaines suivantes :
+
+\begin{table}[H]
+	\centering
+	\caption{Le management du projet}
+	\label{tab:my-table}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{|l|l|}
+			\hline
+			\textbf{Noms}                       & \textbf{Fonctions}                         \\ \hline
+			Mr. KITIO VOUKENG CHRISTIAN PATRICK & Responsable du projet, analyste et testeur \\ \hline
+			MEVA’A JULES JUNIOR                 & Analyste, développeur et testeur           \\ \hline
+		\end{tabular}%
+	}
+\end{table}
+
+\subsection{La communication}
+
+
+\subsubsection{Communication interne du projet}
+
+\begin{itemize}
+	\item Collaboration via GitLab
+	\item Communication via telegram
+	\item Réunion en présentielle ou en ligne (en fonction du contexte) pour l’évaluation de l’évolution du projet et les tests
+\end{itemize}
+
+\subsubsection{Communication externe}
+
+\begin{itemize}
+	\item Avec les encadreurs académiques
+	      \begin{itemize}
+		      \item La communication avec l’encadreur se fera par des séances de travail en présentielles et parfois par moyens téléphoniques.
+	      \end{itemize}
+	\item Avec les potentiels client
+	      \begin{itemize}
+		      \item Information des corps administratif, professoral et estudiantin via les réseaux sociaux (twitter, groupes WhatsApp, Facebook, telegram) de l’existence de l’application.
+		      \item Publication des affiches et spots publicitaires
+		      \item Descente dans les établissements
+	      \end{itemize}
+\end{itemize}
+
+\section{Analyse du système}
+
+\subsection{Analyse fonctionnelle} % (fold)
+\label{sub:analyse-fonctionnelle}
+
+Il s’agit là des fonctionnalités que doivent posséder le système :
+
+\subsubsection{Idedntification des acteurs} % (fold)
+\label{ssub:Idedntification-des-acteurs}
+
+% subsubsection Idedntification des acteurs (end)
+
+Un acteur représente un rôle joué par une entité externe (utilisateur humain, dispositif matériel ou autre système) qui interagit directement avec le système étudié. Un acteur peut consulter et/ou modifier directement l’état du système, en émettant et/ou en recevant des messages susceptibles d’être porteurs de données. Dans le cas de notre application, nous avons pu identifier ces différents acteurs :
+
+\begin{itemize}
+	\item L’administrateur
+	\item L’enseignant
+	\item L’apprenant
+\end{itemize}
+
+\subsubsection{Identification des cas d’utilisation}
+
+Il est question ici de ressortir une manière d’utiliser le système et d’en décrire les exigences fonctionnelles. Nous avons retenu les cas d’utilisation suivants :
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[H]
+	\centering
+	\caption{Les acteurs du systeme et leurs cas d'utilisation}
+	\label{tab:my-table}
+	\begin{tabular}{|l|p{10cm}|}
+		\hline
+		\textbf{Acteurs}                         & \textbf{Cas d’utilisations}                                                           \\ \hline
+		\textbf{L’apprenant}                     & Effectuer une réaction chimique                                                       \\ \hline
+		\multirow{6}{*}{\textbf{L’enseignant}}   & S’inscrire                                                                            \\ \cline{2-2}
+		                                         & Se connecter                                                                          \\ \cline{2-2}
+		                                         & Consulter son compte                                                                  \\ \cline{2-2}
+		                                         & Modifier son compte                                                                   \\ \cline{2-2}
+		                                         & Supprimer son compte                                                                  \\ \cline{2-2}
+		                                         & Créer, Lister, Modifier, activer, désactiver et supprimer des éléments chimiques      \\ \hline
+		\multirow{5}{*}{\textbf{Administrateur}} & Effectuer tous les cas d’utilisation de l’enseignant                                  \\ \cline{2-2}
+		                                         & Lister, activer, désactiver, modifier et supprimer un compte utilisateur.             \\ \cline{2-2}
+		                                         & Lister, activer, désactiver, modifier et supprimer toutes les réactions chimiques.    \\ \cline{2-2}
+		                                         & Lister, activer, désactiver, modifier et supprimer tous les éléments chimiques        \\ \cline{2-2}
+		                                         & Créer, lister, modifier, activer, désactiver et supprimer du matériel de laboratoire. \\ \hline
+	\end{tabular}
+\end{table}
+
+\subsubsection{Diagramme des cas d’utilisation}
+
+Les diagrammes de cas d'utilisation sont des diagrammes utilisés pour une représentation du comportement fonctionnel d'un système logiciel. Ils permettent d’avoir une vue d’ensemble entre les fonctionnalités d’un système et les acteurs qui en bénéficient. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[trim={10cm 0 0 0}, width=1\textwidth]{img/ucd}
+	\caption{Diagramme des cas d’utilisation}
+	\label{fig:mesh1}
+\end{figure}
+
+De ce diagramme ressortent les différents groupe fonctionnalités du module de chimie de l’application VREDU à savoir :  le module de gestion des utilisateurs qui permettra la gestion des compte utilisateur (administrateur et enseignant), le module de gestion des éléments chimique qui permettra les opérations de création, modification. Activation et désactivation des éléments chimiques, le module de gestion des réactions chimiques et le module de gestion du matériel de laboratoire.
+
+\subsubsection{Description textuelle de quelques cas d’utilisation}
+
+\begin{itemize}
+	\item \textbf{S’authentifier}
+	\begin{itemize}
+		\item Sommaire d’identification
+		\begin{itemize}
+			\item Titre : s’authentifier
+			\item Acteurs : Administrateur et enseignant 
+			\item Objectif : Il permet à l’acteur de s’identifier et se connecter en saisissant son login et mot de passe.
+		\end{itemize}
+		\item Description des scénarios
+		\begin{itemize}
+			\item Précondition : L’acteur doit avoir ouvert l’application 
+			\item Post condition :
+			\begin{itemize}
+				\item Acteur connecté.  
+				\item Ouverture de l’interface utilisateur.
+			\end{itemize}
+			\item Scénario nominal 
+			\begin{enumerate}
+				\item L’acteur demande à ouvrir la page de connexion  
+				\item Le système affiche la page de connexion
+				\item L’acteur saisit le nom d’utilisateur et son mot de passe 
+				\item Le système vérifie les données 
+				\item Le système connecte l’acteur et affiche l’interface utilisateur 
+			\end{enumerate}
+			\item Scénario alternatif
+			\begin{itemize}
+				\item A. Erreur de connexion : nom d'utilisateur ou mot de passe non valide
+				
+				Cet enchaînement démarre au point 4 
+
+				\item 5. Le système affiche un message d’erreur correspondant au problème d’identifiants incorrectes.
+				\item B. Erreur de connexion : le compte est désactivé
+
+				Cet enchaînement démarre au point 4 
+
+				\item 5. Le système affiche un message d’erreur correspondant au problème de compte désactive 
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+	\item \textbf{Création d’élément chimique }
+	\begin{itemize}
+		\item Sommaire d’identification
+		\begin{itemize}
+			\item Titre : Création d’élément chimique 
+			\item Acteurs : Administrateur et enseignant 
+			\item Objectif : Il permet à l’acteur de créer un élément chimique pour la plateforme.
+		\end{itemize}
+		\item Description des scénarios
+		\begin{itemize}
+			\item Précondition : Acteur connecté. 
+			\item Post condition :
+			\begin{itemize}
+				\item Elément chimique crée dans la base de données.
+			\end{itemize}
+			\item Scénario nominal 
+			\begin{enumerate}
+				\item L’acteur demande du formulaire de création des éléments 
+				\item Le système affiche le formulaire de création des éléments
+				\item L’acteur soumet le formulaire de création 
+				\item Le système vérifie les données 
+				\item Le système enregistre l’élément chimique et réinitialise le formulaire 
+			\end{enumerate}
+			\item Scénario alternatif
+			\begin{itemize}
+				\item A. Erreur information soumise incorrects 
+
+				Cet enchaînement démarre au point 4 
+				
+				\item 5. Le système affiche un message d’erreur pour informations soumises incorrect.
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+
+	\item \textbf{Effectuer une réaction}
+	\begin{itemize}
+		\item Sommaire d’identification
+		\begin{itemize}
+			\item Titre : Effectuer une réaction
+			\item Acteurs : Apprenant 
+			\item Objectif : Il permet à l’acteur de réaliser une réaction chimique sur la plateforme.
+		\end{itemize}
+		\item Description des scénarios
+		\begin{itemize}
+			\item Précondition : Application ouverte.
+			\item Post condition :
+			\begin{itemize}
+				\item L'interface de réalisation des réactions ouverte.
+			\end{itemize}
+			\item Scénario nominal 
+			\begin{enumerate}
+				\item L’acteur demande le formulaire d'identification des réactions  
+				\item Le système affiche le formulaire d'identification des réactions
+				\item L’acteur saisi l'identifiant d'une réaction et soumet le formulaire 
+				\item Le système recherche a réaction 
+				\item Le système envoie de l'interface de réalisation de la réaction 
+				\item L’acteur effectue un mélange et l’envoie 
+			\end{enumerate}
+			\item Scénario alternatif
+			\begin{itemize}
+				\item A. Erreur réaction introuvable.
+				
+				Cet enchaînement démarre au point 4 
+
+				\item 5.  Le système affiche un message d’erreur pour réaction introuvable.
+				\item B. Erreur réaction désactivée 
+				\item 5. Le système affiche un message d’erreur pour réaction désactivée 
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+
+	\item \textbf{Création d’une réaction}
+	\begin{itemize}
+		\item Sommaire d’identification
+		\begin{itemize}
+			\item Titre : Création d’une réaction 
+			\item Acteurs : Administrateur et enseignant 
+			\item Objectif : Il permet à l’acteur de créer une réaction chimique pour la plateforme.
+		\end{itemize}
+		\item Description des scénarios
+		\begin{itemize}
+			\item Précondition : Acteur connecté.
+			\item Post condition :
+			\begin{itemize}
+				\item Réaction chimique crée dans la base de données. 
+			\end{itemize}
+			\item Scénario nominal 
+			\begin{enumerate}
+				\item L’acteur demande à créer une réaction 
+				\item Le système retourne le formulaire de création
+				\item L’acteur envoie les informations sur la réaction 
+				\item Le système demande une confirmation de création. 
+				\item L’acteur confirme la création 
+				\item Le système enregistre la réaction
+			\end{enumerate}
+			\item Scénario alternatif
+			\begin{itemize}
+				\item A. L’acteur annule la création
+				
+				Cet enchaînement démarre au point 4
+
+				\item 5. Le système annule la création.
+				
+				Le scénario reprend au point 3 
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+
+	\item \textbf{Suppression d’une réaction }
+	\begin{itemize}
+		\item Sommaire d’identification
+		\begin{itemize}
+			\item Titre : Suppression d’une réaction 
+			\item Acteurs : Administrateur et enseignant 
+			\item Objectif : Il permet à l’acteur de supprimer une réaction sur la plateforme.
+		\end{itemize}
+		\item Description des scénarios
+		\begin{itemize}
+			\item Précondition : Acteur connecté.
+			\item Post condition :
+			\begin{itemize}
+				\item La réaction est supprimée de la base de données de l’application. 
+			\end{itemize}
+			\item Scénario nominal 
+			\begin{enumerate}
+				\item L’acteur demande de la liste des réactions
+				\item Le système retourne la liste des réactions
+				\item L’acteur sélectionne une réaction
+				\item Le système demande une confirmation de suppression. 
+				\item L’acteur confirme la suppression
+				\item Le système supprime la réaction
+			\end{enumerate}
+			\item Scénario alternatif
+			\begin{itemize}
+				\item A. L’acteur annule la suppression 
+				
+				Cet enchaînement démarre au point 4 
+
+				\item 5. Le système annule la suppression. 
+				
+				Le scénario reprend au point 3 
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Diagrammes de séquences}
+
+Les diagrammes de séquences sont la représentation graphique des interactions entre les acteurs et le système selon un ordre chronologique. 
+
+\begin{itemize}
+	\item \textbf{S’authentifier}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]{img/ucdAuth}
+		\caption{Diagrammes de séquences du cas d'utilisation s’authentifier}
+		\label{fig:mesh1}
+	\end{figure}
+
+	Ce diagramme fait une description détaille du cas d’utilisation d’authentification qui permet à un utilisateur d’être reconnue par le système afin de lui accorder certain droit sur le système en fonction de son identité. 
+
+
+	\item \textbf{Création d’élément chimique}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]{img/ucdElCr}
+		\caption{Diagrammes de séquences du cas d'utilisation création d’élément chimique}
+		\label{fig:mesh1}
+	\end{figure}
+
+	Ce diagramme fait une description détaille du cas d’utilisation création d’un élément chimique, ce cas permet à un utilisateur connecte de créer un élément chimique pour une réaction chimique. 
+
+
+	\item \textbf{Effectuer une réaction}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]{img/ucdeur}
+		\caption{Diagrammes de séquences du cas d'utilisation effectuer une réaction}
+		\label{fig:mesh1}
+	\end{figure}
+
+	Ce diagramme fait une description détaille du cas effectuer une réaction qui présente le processus de réalisation d’une réaction chimique sur le système par un apprenant.
+\end{itemize}
+
+\subsubsection{Diagrammes d’activités}
+
+Les diagrammes d'activités permettent de mettre l'accent sur les traitements. Ils sont donc particulièrement adaptés à la modélisation du cheminement de flots de contrôle et de flots de données. Ils permettent ainsi de représenter graphiquement le comportement d'une méthode ou le déroulement d'un cas d'utilisation. 
+
+\begin{itemize}
+	\item \textbf{Créer une réaction }
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]{img/sdCUR}
+		\caption{Diagrammes d’activités du cas d'utilisation créer une réaction}
+		\label{fig:mesh1}
+	\end{figure}
+
+	Ce diagramme fait une description détaille du cas créer une réaction qui présente le processus de création d’une réaction chimique sur le système par un administrateur ou un enseignant. 
+
+	\item \textbf{Suppression d’une réaction}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]{img/adsr}
+		\caption{Diagrammes d’activités du cas d'utilisation suppression d’une réaction}
+		\label{fig:mesh1}
+	\end{figure}
+
+	Ce diagramme fait une description détaille du cas suppression d’une réaction qui présente le processus de suppression d’une réaction chimique sur le système par un administrateur ou un enseignant. 
+\end{itemize}
+
+\subsubsection{Diagramme d’état transition}
+
+Un diagramme d'états-transitions est un type de diagramme comportemental en langage de modélisation unifié (UML) qui représente les transitions entre divers objets.
+
+\begin{itemize}
+	\item \textbf{Changement d’état des produits d’une réaction}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]{img/etdR}
+		\caption{Diagramme d’état transition du cas d'utilisation changement d’état des produits d’une réaction}
+		\label{fig:mesh1}
+	\end{figure}
+
+	Ce diagramme présente de façon détaillée le processus de changement d’état d’un produit de réaction lors d’une réaction chimique. 
+
+	\item \textbf{Changement d’état d'authentification d’un utilisateur }
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]{img/etu}
+		\caption{Diagramme d’état transition du cas d'utilisation changement d’état d'authentification d’un utilisateur}
+		\label{fig:mesh1}
+	\end{figure}
+
+	Ce diagramme présente de façon détaillée le changement d’état d’authentification d’un utilisateur en fonction d’évènement effectues sur la plateforme.  
+\end{itemize}
+
+\subsection{Analyse non fonctionnelle} % (fold)
+
+C’est l’ensemble des exigences qui ne concernent pas spécifiquement le comportement du système mais plutôt identifient des contraintes internes et externes du système. Ainsi les principaux besoins non fonctionnels de notre système sont : 
