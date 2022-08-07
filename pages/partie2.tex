@@ -667,3 +667,143 @@ Un diagramme d'états-transitions est un type de diagramme comportemental en lan
 \subsection{Analyse non fonctionnelle} % (fold)
 
 C’est l’ensemble des exigences qui ne concernent pas spécifiquement le comportement du système mais plutôt identifient des contraintes internes et externes du système. Ainsi les principaux besoins non fonctionnels de notre système sont : 
+
+\begin{itemize}
+	\item Le code doit être clair, bien structuré pour permettre des futures évolutions du système ; 
+	\item L’ergonomie : la plateforme doit offrir des interfaces conviviales et faciles à utiliser ;
+\end{itemize}
+
+\subsection{Technique et Méthodes} % (fold)
+
+\subsubsection{Choix des techniques de développement}
+
+Plusieurs techniques peuvent être utilisées pour réaliser d’une plateforme web et 3D : 
+
+\begin{itemize}
+	\item \textbf{Le code pur et dur} :
+	
+	C’est ainsi que les informaticiens créent leur première application. Il est nécessaire d’avoir de bonnes connaissances en programmation. En effet toute l'application est créée à partir de ligne de code complètement illisible pour un profane. Cette solution est longue, couteuse et rarement assez complète pour permettre une modification facile de l’application. Aujourd’hui, la plupart des développeurs ne crée plus leur application de A à Z, ils utilisent une des méthodes suivantes. 
+
+	\item \textbf{Les CMS (Content management system) pour le web} : 
+
+	Ce sont des aides à la création d’applications. Ils ne font pas tous à votre place, mais vous aident en grande partie. Il est très recommandé d’avoir des connaissances en informatique pour réaliser une application à partir d’un CMS. Certains sont en effet très compliqués à mettre en place. De plus aucun hébergement n’est fourni avec le CMS. Il faudra donc mettre en place un serveur HTTP pour héberger son application. Pour finir, la personnalisation du design d’une application sur un CMS est assez fastidieuse. Il sera presque à tous les cas obligatoires de mettre la main dans le code source de   l’application. D’autres techniques existent notamment les Outils en ligne. 
+
+	\item \textbf{Framework et librairies} :
+
+	Il existe également des Framework et librairies (bout de code écrit permettant de faciliter le travail du développeur), qui est l’une des méthodes les plus utilisée dans le monde du développement, nous avons donc optes pour cette méthode et nous allons choisir un Framework parmi ceux existant.
+\end{itemize}
+
+\subsubsection{Choix du Framework}
+
+\textbf{ASP.net} pour le \textbf{backend}, \textbf{React} pour le \textbf{frontend} et \textbf{unreal engine} pour la \textbf{3D}. Comme \textbf{SGBD}, nous avons allons utiliser \textbf{PostgreSQL} (le SGBD utilisé par l’entreprise). 
+
+\section{Conception du système}
+
+\subsection{Diagramme de classe} % (fold)
+
+Le diagramme de classes est un schéma utilisé pour présenter les classes et les interfaces des systèmes ainsi que leurs relations. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[trim={5cm 0 0 0}, width=1\textwidth]{img/dc}
+	\caption{Diagramme de classe du système}
+	\label{fig:mesh1}
+\end{figure}
+
+Ce diagramme présente les classes et leurs interactions dans le système. 
+
+\subsection{Diagramme de déploiement} % (fold)
+
+En UML, un diagramme de déploiement est une vue statique qui sert à représenter l’utilisation de l’infrastructure physique par le système et la manière dont les composants du système sont répartis ainsi que leurs relations entre eux. Les éléments utilisés par un diagramme de déploiement sont principalement les nœuds, les composants, les associations et les artefacts. Les caractéristiques des ressources matérielles physiques et des supports de communication peuvent être précisées par stéréotype. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{img/dd}
+	\caption{Diagramme de déploiement du système}
+	\label{fig:mesh1}
+\end{figure}
+
+\chapter{Implémentation de la solution et résultats}
+
+\section{Outils et technologies}
+
+De la conception à la réalisation de notre application, nous avons eu à utiliser les outils et technologies suivants : 
+
+\begin{itemize}
+	\item \textbf{Unreal Engine 5} : qui est un moteur de rendu 3D utilisé dans la création de jeux et la simulation d'environnement 3D utilisant le langage de programmation c++.
+	\item \textbf{React \& React Dom} : qui est un Framework javascript très populaire permettant la création d’interfaces utilisateur web simplement et rapidement, il offre une grande documentation et possède une communauté très active.
+	\item \textbf{ASP.NET core web api} : est un Framework C\# permettant la création d’api REST développé par Microsoft. 
+	\item \textbf{PostgreSQL} : C’est un système de gestion de base de données relationnelle et objet. C'est un outil libre disponible selon les termes d'une licence de type BSD. Ce système est concurrent d'autres systèmes de gestion de base de données, qu'ils soient libres, ou propriétaires ;
+	\item \textbf{Git \& GitHub} : Git est un logiciel de gestion de versions décentralisé. C'est un logiciel libre créé par Linus Torvalds, auteur du noyau Linux, et distribué selon les termes de la licence publique générale GNU version 2. GitHub est un logiciel libre de forge basé sur git proposant les fonctionnalités de wiki, un système de suivi des bugs, l’intégration continue et la livraison continue ;
+	\item \textbf{Rider} : C’est un environnement de développement .NET multiplateforme de chez jetbrains basé sur la plateforme IntelliJ et ReSharper.
+	\item \textbf{Webstorm} : C’est un IDE pour les langages Web, développé par l'entreprise JetBrains et basé sur la plateforme IntelliJ IDEA ;
+	\item \textbf{Docker} : C’est un IDE pour les langages Web, développé par l'entreprise JetBrains et basé sur la plateforme IntelliJ IDEA ;
+	\item \textbf{Jira} : est un système de suivi de bugs, de gestion des incidents et de gestion de projets développé par Atlassian. 
+	\item \textbf{Visual paradigme} : C’est un outil UML CASE prenant en charge UML 2, SysML et la notation de modélisation de processus métier (BPMN) d’Object Management Group (OMG). Outre la modélisation, il offre des fonctionnalités de génération de rapports et d’ingénierie de code, y compris la génération de code. 
+	\item \textbf{Gantt Project} : est un logiciel libre de gestion de projet écrit en Java. 
+\end{itemize}
+
+\section{Présentation de quelques IHM}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{img/home}
+	\caption{IHM de la page d'accueil}
+	\label{fig:mesh1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{img/insc}
+	\caption{IHM de la page d'inscription des enseignants}
+	\label{fig:mesh1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{img/conn}
+	\caption{IHM de la page de connexion des enseignants}
+	\label{fig:mesh1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{img/esp}
+	\caption{IHM de la page espace personnel des enseignants et administrateurs}
+	\label{fig:mesh1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{img/labot}
+	\caption{IHM du laboratoire en vue de dessus}
+	\label{fig:mesh1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{img/labof}
+	\caption{IHM du laboratoire en vue de face}
+	\label{fig:mesh1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{img/labo1}
+	\caption{IHM du laboratoire intérieur vue du fond}
+	\label{fig:mesh1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{img/labo2}
+	\caption{IHM du laboratoire intérieur vue de l'apprenant}
+	\label{fig:mesh1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{img/labo3}
+	\caption{IHM du laboratoire intérieur vue de l'enseignant}
+	\label{fig:mesh1}
+\end{figure}
