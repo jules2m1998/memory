@@ -32,8 +32,6 @@
 \usepackage[utf8]{inputenc} % Codification
 \usepackage[english, french]{babel} % Writing idiom
 
-\usepackage{float}
-
 \addto\captionsfrench{\def\tablename{Tableau}}
 
 \usepackage[export]{adjustbox} % Align images
@@ -49,13 +47,13 @@
 \usepackage{fancyhdr} % Head note and footnote
     \pagestyle{fancy}
     \fancyhf{}
-    \fancyhead[C]{\footnotesize Analyse et conception d’un module d’apprentissage de la chimie dans un environnement immersif basé sur la réalité virtuelle } % Left of Head note
+    \fancyhead[C]{\footnotesize Analyse et conception d'un module d'apprentissage immersif basé sur la réalité virtuelle : cas de la chimie} % Left of Head note
     \fancyfoot[L]{\footnotesize Rédigé et Présenté par MEVA'A JULES JUNIOR.} % Left of Footnote
     \fancyfoot[R]{\thepage} % Center of Footnote
     \renewcommand{\footrulewidth}{0.4pt} % Footnote rule
 \usepackage{float} % Utilization of [H] in figures
 \usepackage{graphicx} % Figures in LaTeX
-\usepackage[colorlinks = true, plainpages = true, linkcolor = istblue, urlcolor = istblue, citecolor = istblue, anchorcolor = istblue]{hyperref}
+% \usepackage[colorlinks = true, plainpages = false, linkcolor = istblue, urlcolor = istblue, citecolor = istblue, anchorcolor = istblue]{hyperref}
 \usepackage{indentfirst} % First paragraph
 \usepackage{siunitx} % SI units
 
@@ -71,6 +69,8 @@
 \usepackage[T1]{fontenc}
 \usepackage{titlesec}
 
+\usepackage[hidelinks]{hyperref}
+
 % Array
 \usepackage{array,multirow,makecell}
 \usepackage{tabularx}
@@ -85,11 +85,6 @@
 % \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Specific rule definition
 % \renewcommand{\appendixpagename}{\LARGE Appendices}
 
-
-% Colors
-\definecolor{istblue}{RGB}{3, 171, 230}
-\definecolor{dkgreen}{rgb}{0,0.6,0}
-\definecolor{gray}{rgb}{0.5,0.5,0.5}
 
 \setsecnumdepth{subsection}
 \setsecnumdepth{subsubsection}
