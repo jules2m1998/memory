@@ -1,6 +1,6 @@
 \part{RÉALISATION}
 
-\chapter{Analyse et conception}
+\chapter{Cadrage, analyse et conception}
 
 \textit{Comme tout problème qui a été clairement défini, il faut le réaliser mais nous ne pouvons
 	parler d’implémentation sans toutefois faire une analyse et une conception. Pour ce faire,
@@ -155,32 +155,32 @@ Ce tableau présente une estimation du matériel selon le besoin et la durée.
 
 	\begin{tabular}{ |p{7cm}|p{2cm}|p{3cm}|p{3cm}| }
 		\hline
-		\textbf{Ressource}                                                                                                                                                                                                                                     & \textbf{Nombre de payement} & \textbf{Cout par payement} & \textbf{Total} \\
+		\textbf{Ressource}                                                                                                                                                                                                                                     & \textbf{Nombre de payement} & \textbf{Cout par payement}                   & \textbf{Total} \\
 		\hline
-		Desktop monté avec les caractéristiques : 32Go de RAM, Une carte graphique Nvidia GeForce GTX 1070, 250Go de disque dur SSD, 1To de disque dur HDD, Processeur Intel core i7 3.60GHz, Boitier et carte graphique predator, Ecran 32 pouces, Clavier HP & 7                           & 23.472 XAF                 & 164.304 XAF    \\
+		Desktop monté avec les caractéristiques : 32Go de RAM, Une carte graphique Nvidia GeForce GTX 1070, 250Go de disque dur SSD, 1To de disque dur HDD, Processeur Intel core i7 3.60GHz, Boitier et carte graphique predator, Ecran 32 pouces, Clavier HP & 7                           & 23.472 XAF (\textit{Amortissement par mois}) & 164.304 XAF    \\
 		\hline
-		1 serveur de développement : 100 Go SSD, 4 Go Ram, Ubuntu 20                                                                                                                                                                                           & 7                           & 80.000 XAF                 & 560.000 XAF    \\
+		1 serveur de développement : 100 Go SSD, 4 Go Ram, Ubuntu 20                                                                                                                                                                                           & 7                           & 80.000 XAF                                   & 560.000 XAF    \\
 		\hline
-		1 serveur git: 2Go RAM, 30 Go HDD, Ubuntu 20                                                                                                                                                                                                           & 7                           & 80.000 XAF                 & 560.000 XAF    \\
+		1 serveur git: 2Go RAM, 30 Go HDD, Ubuntu 20                                                                                                                                                                                                           & 7                           & 80.000 XAF                                   & 560.000 XAF    \\
 		\hline
-		1 casque oculus                                                                                                                                                                                                                                        & 7                           & 80.000 XAF                 & 560.000 XAF    \\
+		1 casque oculus                                                                                                                                                                                                                                        & 7                           & 5.940 XAF (\textit{Amortissement par mois})  & 41.580 XAF     \\
 		\hline
-		Connexion Internet haut débit                                                                                                                                                                                                                          & 7                           & 80.000 XAF                 & 560.000 XAF    \\
+		Connexion Internet haut débit                                                                                                                                                                                                                          & 7                           & 30.000 XAF                                   & 210.000 XAF    \\
 		\hline
-		Rider                                                                                                                                                                                                                                                  & 7                           & 80.000 XAF                 & 560.000 XAF    \\
+		Rider                                                                                                                                                                                                                                                  & 1                           & 91.809 XAF                                   & 91.809 XAF     \\
 		\hline
-		Unreal engine                                                                                                                                                                                                                                          & 7                           & 80.000 XAF                 & 560.000 XAF    \\
+		Unreal engine                                                                                                                                                                                                                                          & 7                           & Gratuit                                      & Gratuit        \\
 		\hline
-		Webstorm                                                                                                                                                                                                                                               & 7                           & 80.000 XAF                 & 560.000 XAF    \\
+		Webstorm                                                                                                                                                                                                                                               & 1                           & 91.809 XAF                                   & 91.809 XAF     \\
 		\hline
-		\multicolumn{3}{| l |}{\textbf{Total} }                                                                                                                                                                                                                & 1.673.304 XAF                                                             \\
+		\multicolumn{3}{| l |}{\textbf{Total} }                                                                                                                                                                                                                & 1.719.502 XAF                                                                               \\
 		\hline
 	\end{tabular}
 \end{table}
 
-Le coût du matériel est ainsi estimé à : \textbf{1.673.304 XAF}
+Le coût du matériel est ainsi estimé à : \textbf{1.719.502 XAF}
 
-Ainsi le coût total du projet est de \textbf{5.723.304 XAF }
+Ainsi le coût total du projet est de \textbf{5.769.502 XAF }
 
 \subsection{La technique}
 
@@ -339,9 +339,9 @@ Il s’agit là des fonctionnalités que doivent posséder le système :
 Un acteur représente un rôle joué par une entité externe (utilisateur humain, dispositif matériel ou autre système) qui interagit directement avec le système étudié. Un acteur peut consulter et/ou modifier directement l’état du système, en émettant et/ou en recevant des messages susceptibles d’être porteurs de données. Dans le cas de notre application, nous avons pu identifier ces différents acteurs :
 
 \begin{itemize}
-	\item L’administrateur
-	\item L’enseignant
-	\item L’apprenant
+	\item L’administrateur : il est chargé de la modération de l'application en ayant accès à toutes les fonctionnalités de la version web de l'application.
+	\item L’enseignant : c'est celui qui crèe les réactions chimiques dans le système.
+	\item L’apprenant : c'est celui qui effectue les réations dans un casque de réalité virtuelle.
 \end{itemize}
 
 \subsubsection{Identification des cas d’utilisation}
@@ -770,7 +770,7 @@ un mot de passe.
 	\label{fig:mesh1}
 \end{figure}
 
-Il y apparait le formulaire de connexion avec les champs pour le nom d'utilisateur et le mot de passe à remplir avant soumission. 
+Il y apparait le formulaire de connexion avec les champs pour le nom d'utilisateur et le mot de passe à remplir avant soumission.
 Deux catégorie d'utilisateurs peuvent utiliser cette interface à savoir les administrateurs et les enseignants.
 
 \subsubsection{Page espace personnel des enseignants et administrateurs}
@@ -1063,7 +1063,7 @@ Il est question ici du code React permettant le rendu de la page de listing des 
 	\caption{IHM formulaire de création des réactions chimiques}
 \end{figure}
 
-Ce formulaire permet la création d'une réaction chimique à un utilisateur. Il est question ici de lui donner un nom, un description, 
+Ce formulaire permet la création d'une réaction chimique à un utilisateur. Il est question ici de lui donner un nom, un description,
 lister les réactifs et les produits de la réaction et de l'activer ou la désactiver.
 
 \subsubsection{Code source backend}
