@@ -1,0 +1,134 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% main.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                      %
+% --------------------- Report Template IST [EN] --------------------- %
+%                                                                      %
+%       João Marafuz Gaspar                                            %
+%       Departamento de Engenharia Eletrotécnica e de Computadores     %
+%       Instituto Superior Tecnico                                     %
+%       Av. Rovisco Pais                                               %
+%       1049-001 Lisboa                                                %
+%       Portugal                                                       %
+%       E-mail: joao.marafuz.gaspar@tecnico.ulisboa.pt                 %
+%                                                                      %
+%  Created:       Jul 30, 2022                                         %
+%  Last Modified: Jul 30, 2022                                         %
+%                                                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Revision history                                                    %
+%  v1 - 2022/07/30 - original template                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                              Preamble                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ----------------------------------------------------------------------
+% Set the document class
+% ----------------------------------------------------------------------
+\documentclass[12pt,a4paper,oneside]{memoir}
+
+% ----------------------------------------------------------------------
+% Define external packages, language, margins, fonts, new commands 
+% and colors
+% ----------------------------------------------------------------------
+\usepackage[utf8]{inputenc} % Codification
+\usepackage[english, french]{babel} % Writing idiom
+
+\addto\captionsfrench{\def\tablename{Tableau}}
+
+\newcommand{\theme}{Analyse, conception et réalisation d'un module d'apprentissage immersif basé sur la réalité virtuelle : cas des travaux pratique de la chimie}
+\newcommand{\pb}{Comment l'utilisation des technologies informatiques pourraient contribuer à faciliter l'enseignement de la chimie dans notre système éducatif et plus précisément dans l'enseignement secondaire ?}
+
+\usepackage[export]{adjustbox} % Align images
+\usepackage{amsmath} % Extra commands for math mode
+\usepackage{amssymb} % Mathematical symbols
+\usepackage{anysize} % Personalize margins
+    \marginsize{2cm}{2cm}{2cm}{2cm} % {left}{right}{above}{below}
+\usepackage{appendix} % Appendices
+\usepackage{cancel} % Expression cancellation
+\usepackage{caption} % Figure numeration
+\usepackage{cite} % Citations, like [1 - 3]
+\usepackage{color} % Text coloring
+\usepackage{fancyhdr} % Head note and footnote
+    \pagestyle{fancy}
+    \fancyhf{}
+    \fancyhead[C]{\footnotesize \theme} % Left of Head note
+    \fancyfoot[L]{\footnotesize Rédigé et soutenu par MEVA'A JULES JUNIOR.} % Left of Footnote
+    \fancyfoot[R]{\thepage} % Center of Footnote
+    \renewcommand{\footrulewidth}{0.4pt} % Footnote rule
+\usepackage{float} % Utilization of [H] in figures
+\usepackage{graphicx} % Figures in LaTeX
+% \usepackage[colorlinks = true, plainpages = false, linkcolor = istblue, urlcolor = istblue, citecolor = istblue, anchorcolor = istblue]{hyperref}
+\usepackage{indentfirst} % First paragraph
+\usepackage{siunitx} % SI units
+
+
+\providecommand{\keywords}[2]{\textbf{\textit{#1 ---}} #2}
+% Random text (not needed)
+\usepackage{lipsum}
+\usepackage{duckuments}
+
+\usepackage{afterpage}
+
+% Chapter display
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{listings} % Code listings
+
+% Array
+\usepackage{array,multirow,makecell}
+\usepackage{tabularx}
+\setcellgapes{1pt}
+\makegapedcells
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash }b{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash }b{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash }b{#1}}
+
+% New and re-newcommands
+% \newcommand{\sen}{\operatorname{\sen}} % Sine function definition
+% \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Specific rule definition
+% \renewcommand{\appendixpagename}{\LARGE Appendices}
+
+
+\setsecnumdepth{subsection}
+\setsecnumdepth{subsubsection}
+\setsecnumdepth{paragraph}
+\setsecnumdepth{subparagraph}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                 Document                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\pagenumbering{roman}
+\include{pages/dedicace}
+
+\include{pages/remerciement}
+
+\renewcommand\contentsname{Sommaire}
+\setcounter{tocdepth}{0}
+\tableofcontents % Table des matières
+\clearpage
+\listoffigures
+\clearpage
+\listoftables
+
+\include{pages/resume}
+\include{pages/abstract}
+
+\pagenumbering{arabic}
+\include{pages/introduction}
+\include{pages/partie1}
+\include{pages/partie2}
+\include{pages/conclusion}
+
+% \LaTeX{} \cite{li20203d}
+
+% \nocite{*}
+\bibliographystyle{ieeetr} % We choose the "plain" reference style
+\bibliography{refs} % Entries are in the refs.bib file
+\clearpage
+\setcounter{tocdepth}{3}
+\tableofcontents % Table des matières
+\end{document}
