@@ -886,25 +886,29 @@ De la conception à la réalisation de notre application, nous avons eu à utili
 	\item \textbf{Gantt Project} : est un logiciel libre de gestion de projet écrit en Java.
 \end{itemize}
 
+\newpage
 \section{Résultats}
 
-\subsection{Édition du profile utilisateur}
+\subsection{Édition du profil utilisateur}
 
-\subsubsection{Interface d'édition du profile utilisateur}
+\subsubsection{Interface d'édition du profil utilisateur}
 
 Il est question de l'interface qui permettra à un utilisateur en occurence un administrateur ou un enseignant de modifier ses information personnelles.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{img/editpr}
-	\caption{IHM formulaire d'édition du profile utilisateur}
+	\caption{IHM formulaire d'édition du profil utilisateur}
 	\label{fig:mesh1}
 \end{figure}
 
-Il y apparait à gauche les différents menus disponibles de l'application, et à gauche une zone de fomulaire permettant la modification des informations d'un utilisateur.
+Il y apparait à gauche les différents menus disponibles de l'application, et à droite une zone de fomulaire permettant la modification des informations d'un utilisateur.
 
 \subsubsection{Code source backend}
 
+Le code backend du model d'utilisateur permet la création d'une représentation sous forme de classe d'un utilisateur, représentation qui sera utile à notre ORM (entity Framework) pour stocker, modifier, lire et supprimer un utilisateur en base de données.
+
+Le schéma ci-dessous montre la représentation sous forme de classe d'un utilisateur avec ses différents attributs à savoir la date de création de son profil, la dernière date de modification de son profil, son prénom, son nom, sa date de naissance et plusieurs autres critères nécessaires à son rôle dans l'application.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{img/codeuu}
@@ -912,7 +916,9 @@ Il y apparait à gauche les différents menus disponibles de l'application, et �
 	\label{fig:mesh1}
 \end{figure}
 
-Il est question ici de la définition du model d'utilisateur qui sera stocké en base de données.
+Le code backend d'un controller permet de définir des réponses en fonction de requêtes effectuées par un client sur un serveur.
+
+Le code ci-dessous présente le backend du controller utilisateur plus précisément la fonctionnalité de la modification des informations d'un utilisateur.
 
 \begin{figure}[H]
 	\centering
@@ -921,7 +927,9 @@ Il est question ici de la définition du model d'utilisateur qui sera stocké en
 	\label{fig:mesh1}
 \end{figure}
 
-Il est question ici d'une partie du code du controller permettant la gestion des utilisateurs avec la fonctionnalités d'édition des comptes utilisateurs.
+Le test unitaire est une procédure permettant de vérifier le bon fonctionnement d'une partie précise d'un logiciel ou d'une portion d'un programme. 
+
+Le code ci-dessous présente le teste unitaire de la fonctionnalité d'édition du profile utilisateur.
 
 \begin{figure}[H]
 	\centering
@@ -930,7 +938,7 @@ Il est question ici d'une partie du code du controller permettant la gestion des
 	\label{fig:mesh1}
 \end{figure}
 
-Il est question ici d'une partie du code de test de la fonctionnalités d'édition du profile utilisateur.
+La figure ci-dessous présente le résultat du teste unitaire du cas d'utilisation de l'édition du profile utilisateur.
 
 \begin{figure}[H]
 	\centering
@@ -939,9 +947,11 @@ Il est question ici d'une partie du code de test de la fonctionnalités d'éditi
 	\label{fig:mesh1}
 \end{figure}
 
-Nous avons ici le resultat du test unitaire du cas d'utilisation de l'édition du profile utilisateur, qui s'avère concluent.
-
 \subsubsection{Code source frontend}
+
+Le code source frontend est celle qui permet la réalisation de l'interface que l'utilisateur verra par le billet d'un navigateur web.
+
+La figure ci-dessous présente le code qui a permis la création de l'interface d'édition du profile utilisateur.
 
 \begin{figure}[H]
 	\centering
@@ -950,11 +960,11 @@ Nous avons ici le resultat du test unitaire du cas d'utilisation de l'édition d
 	\label{fig:mesh1}
 \end{figure}
 
-Il est question ici du code React permettant le rendu de la page d'édition du profile utilisateur.
-
 \subsection{Creation des éléments chimiques}
 
 \subsubsection{Interface de creation des éléments chimiques}
+
+Le formulaire sur la figure ci-dessous permet la création d'un élément chimique (Atome et molécule) et celà en fonction de notre role, seul l'administrateur à le droit de créer des atomes tandis que la création des molécules est autorisée à tous les utilisateurs.
 
 \begin{figure}[H]
 	\centering
@@ -963,9 +973,10 @@ Il est question ici du code React permettant le rendu de la page d'édition du p
 	\label{fig:mesh1}
 \end{figure}
 
-Ce formulaire permet la création d'un élément chimique (Atome et molécule) et celà en fonction de notre role, seul l'administrateur à le droit de créer des atomes tandis que la création des molécules est autorisée à tous les utilisateurs.
 
 \subsubsection{Code source backend}
+
+La figure ci-dessous présente la définition du model d'élément chimique qui sera stocké en base de données.
 
 \begin{figure}[H]
 	\centering
@@ -974,8 +985,7 @@ Ce formulaire permet la création d'un élément chimique (Atome et molécule) e
 	\label{fig:mesh1}
 \end{figure}
 
-Il est question ici de la définition du model d'élément chimique qui sera stocké en base de données.
-
+La figure ci-dessous présente la partie du code backend responsable de la création d'un élement chimique.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{img/cep}
@@ -983,7 +993,7 @@ Il est question ici de la définition du model d'élément chimique qui sera sto
 	\label{fig:mesh1}
 \end{figure}
 
-Il est question ici du code permettant la création d'un élément chimique (atomes).
+La figure ci-dessous présente le test unitaire de a fonctionnalités de création d'élément chimique.
 
 \begin{figure}[H]
 	\centering
@@ -992,7 +1002,7 @@ Il est question ici du code permettant la création d'un élément chimique (ato
 	\label{fig:mesh1}
 \end{figure}
 
-Il est question ici d'une partie du code de test de la fonctionnalités de création d'élément chimique.
+La figure ci-dessous présente le résultat du test unitaire du cas d'utilisation de la création d'élément chimique, qui s'avère concluent.
 
 \begin{figure}[H]
 	\centering
@@ -1000,8 +1010,6 @@ Il est question ici d'une partie du code de test de la fonctionnalités de créa
 	\caption{Résultat du test unitaire du cas d'utilisation de la création d'élément chimique}
 	\label{fig:mesh1}
 \end{figure}
-
-Nous avons ici le resultat du test unitaire du cas d'utilisation de la création d'élément chimique, qui s'avère concluent.
 
 \subsubsection{Code source frontend}
 
