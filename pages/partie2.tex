@@ -893,7 +893,7 @@ De la conception à la réalisation de notre application, nous avons eu à utili
 
 \subsubsection{Interface d'édition du profil utilisateur}
 
-Il est question de l'interface qui permettra à un utilisateur en occurence un administrateur ou un enseignant de modifier ses information personnelles.
+La figure ci-dessous présente l'interface qui permettra à un utilisateur en occurence un administrateur ou un enseignant de modifier ses information personnelles.
 
 \begin{figure}[H]
 	\centering
@@ -908,7 +908,8 @@ Il y apparait à gauche les différents menus disponibles de l'application, et �
 
 Le code backend du model d'utilisateur permet la création d'une représentation sous forme de classe d'un utilisateur, représentation qui sera utile à notre ORM (entity Framework) pour stocker, modifier, lire et supprimer un utilisateur en base de données.
 
-Le schéma ci-dessous montre la représentation sous forme de classe d'un utilisateur avec ses différents attributs à savoir la date de création de son profil, la dernière date de modification de son profil, son prénom, son nom, sa date de naissance et plusieurs autres critères nécessaires à son rôle dans l'application.
+La figure ci-dessous montre la représentation sous forme de classe d'un utilisateur avec ses différents attributs à savoir la date de création de son profil, la dernière date de modification de son profil, son prénom, son nom, sa date de naissance et plusieurs autres critères nécessaires à son rôle dans l'application.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{img/codeuu}
@@ -1013,6 +1014,8 @@ La figure ci-dessous présente le résultat du test unitaire du cas d'utilisatio
 
 \subsubsection{Code source frontend}
 
+La figure ci-dessous présente le code qui a permis la création de l'interface de création d'élément chimique.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{img/fec}
@@ -1020,11 +1023,12 @@ La figure ci-dessous présente le résultat du test unitaire du cas d'utilisatio
 	\label{fig:mesh1}
 \end{figure}
 
-Il est question ici du code React permettant le rendu de la page de création d'élément chimique.
-
 \subsection{Listing des éléments chimiques}
 
 \subsubsection{Interface de listing des éléments chimiques}
+
+La figure ci-dessous présente l'interface qui permet le listing des élements chimiques. 
+La pemière section présente la liste des atomes utilisables sur la plateforme et dans la deuxième section plus basse la liste des molécules crées par les utilisateurs de la plateforme. 
 
 \begin{figure}[H]
 	\centering
@@ -1033,9 +1037,11 @@ Il est question ici du code React permettant le rendu de la page de création d'
 	\label{fig:mesh1}
 \end{figure}
 
-Cette interface permet la listing des éléments chimiques (Atome et molécule) enregistrés dans la base de données.
-
 \subsubsection{Code source backend}
+
+Le code ci-dessous présente le backend du controller d'éléments chimiques plus précisément la fonctionnalité de listing des éléments chimiques.
+
+Cette fonctionnalité permet la recupération des élements chimiques en base de données afin de les communiquer à l'interface pour un rendu à l'utilisateur (enseignants ou administrateurs).
 
 \begin{figure}[H]
 	\centering
@@ -1043,7 +1049,9 @@ Cette interface permet la listing des éléments chimiques (Atome et molécule) 
 	\caption{Code backend du controller de listing des éléments chimiques}
 \end{figure}
 
-Il est question ici du code backend permettant la recupération des élements chimiques en base de données afin de les communiquer à l'interface pour un rendu à l'utilisateur (enseignants ou administrateurs).
+Le code ci-dessous présente le teste unitaire de la fonctionnalité de listing des éléments chimiques.
+
+Ce teste unitaire permet de s'assuser que toutes les réponses aux requêtes de listing des éléments chimiques sur le serveur soient des réponses de type succès et que le contenu de la réponse soit une liste d'éléments chimique.
 
 \begin{figure}[H]
 	\centering
@@ -1051,7 +1059,7 @@ Il est question ici du code backend permettant la recupération des élements ch
 	\caption{Code backend du test unitaire du cas d'utilisation de la listing des éléments chimiques}
 \end{figure}
 
-Il est question ici du code de test unitaire de la fonctionnalités de listing des éléments chimiques.
+La figure ci-dessous présente le résultat du teste unitaire du cas d'utilisation de listing des éléments chimiques et revèle que le teste est concluent.
 
 \begin{figure}[H]
 	\centering
@@ -1059,9 +1067,9 @@ Il est question ici du code de test unitaire de la fonctionnalités de listing d
 	\caption{Resultat du test unitaire de la fonctionnalités de listing des éléments chimiques}
 \end{figure}
 
-Nous avons ici le resultat du test unitaire de la fonctionnalités de listing des éléments chimiques, qui s'avère concluent.
-
 \subsubsection{Code source frontend}
+
+La figure ci-dessous présente le code qui a permis la création de l'interface de listing des éléments chimiques.
 
 \begin{figure}[H]
 	\centering
@@ -1069,11 +1077,13 @@ Nous avons ici le resultat du test unitaire de la fonctionnalités de listing de
 	\caption{Code frontend du cas d'utilisation de la listing des éléments chimiques}
 \end{figure}
 
-Il est question ici du code React permettant le rendu de la page de listing des éléments chimiques.
-
 \subsection{Création des réactions chimiques}
 
 \subsubsection{Interface du formulaire de création des réactions chimiques}
+
+La figure ci-dessous présente l'interface qui permet la création des réactions chimiques. 
+
+Il est question ici d'un formulaire dont les champs permettent la récupération des informations pour la réaction et son enregistrement en base de données.
 
 \begin{figure}[H]
 	\centering
@@ -1081,10 +1091,10 @@ Il est question ici du code React permettant le rendu de la page de listing des 
 	\caption{IHM formulaire de création des réactions chimiques}
 \end{figure}
 
-Ce formulaire permet la création d'une réaction chimique à un utilisateur. Il est question ici de lui donner un nom, un description,
-lister les réactifs et les produits de la réaction et de l'activer ou la désactiver.
-
 \subsubsection{Code source backend}
+
+La figure ci-dessous présente la définition du modèle d'une réaction chimique qui sera stocké en base de données.
+
 
 \begin{figure}[H]
 	\centering
@@ -1092,7 +1102,9 @@ lister les réactifs et les produits de la réaction et de l'activer ou la désa
 	\caption{Code backend du model de réaction}
 \end{figure}
 
-Il est question ici de la représentation du modèle d'une réaction chimique qui sera stocké en base de données.
+La figure ci-dessous présente le code backend du controller des réactions chimiques plus précisément la fonctionnalité de création des réactions chimiques.
+
+Cette fonctionnalité permet la création des réactions chimiques en base de données pour une pratique par les apprenants.
 
 \begin{figure}[H]
 	\centering
@@ -1100,7 +1112,9 @@ Il est question ici de la représentation du modèle d'une réaction chimique qu
 	\caption{Code backend du controller de création des réactions chimiques}
 \end{figure}
 
-Il est question ici du code permettant la sauvegarde en base de données d'une réaction chimique, cette action n'est possible qu'une fois authentifié.
+Le code ci-dessous présente le teste unitaire de la fonctionnalité de la création d'une réaction chimique.
+
+Ce teste unitaire permet de s'assurer que toutes les réquêtes de création de réactions chimiques sur le serveur soient des réponses de type succès et que la réaction a bien été stockée en base de donnée.
 
 \begin{figure}[H]
 	\centering
@@ -1108,7 +1122,7 @@ Il est question ici du code permettant la sauvegarde en base de données d'une r
 	\caption{Code backend du test unitaire du cas d'utilisation de la création d'une réaction chimique}
 \end{figure}
 
-Il est question ici d'une partie du code de test de la fonctionnalités de création d'une réaction chimique.
+La figure ci-dessous présente le résultat du teste unitaire du cas d'utilisation de création de réactions chimiques et revèle que le teste est concluent.
 
 \begin{figure}[H]
 	\centering
@@ -1116,9 +1130,9 @@ Il est question ici d'une partie du code de test de la fonctionnalités de créa
 	\caption{Resultat du test unitaire de la fonctionnalités de création d'une réaction chimique}
 \end{figure}
 
-Nous avons ici le resultat du test unitaire de la fonctionnalités de création d'une réaction chimique, qui s'avère concluent.
-
 \subsubsection{Code source frontend}
+
+La figure ci-dessous présente le code qui a permis la création de l'interface de création d'une réaction chimique.
 
 \begin{figure}[H]
 	\centering
@@ -1126,11 +1140,11 @@ Nous avons ici le resultat du test unitaire de la fonctionnalités de création 
 	\caption{Code frontend du cas d'utilisation de la création d'une réaction chimique}
 \end{figure}
 
-Il est question ici du code React permettant le rendu de la page de création d'une réaction chimique.
-
 \subsection{Listing des réactions chimiques}
 
 \subsubsection{Interface de listing des réactions chimiques}
+
+La figure ci-dessous présente l'interface qui permet le listing des réactions chimiques. 
 
 \begin{figure}[H]
 	\centering
@@ -1138,9 +1152,11 @@ Il est question ici du code React permettant le rendu de la page de création d'
 	\caption{IHM du listing des réactions chimiques}
 \end{figure}
 
-Cette interface permet de lister les réactions d'un utilisateur connecté.
-
 \subsubsection{Code source backend}
+
+Le code ci-dessous présente le backend du controller d'éléments chimiques plus précisément la fonctionnalité de listing des réactions chimiques.
+
+Cette fonctionnalité permet la recupération des réactions chimiques en base de données afin de les communiquer à l'interface pour un rendu à l'utilisateur (enseignants ou administrateurs).
 
 \begin{figure}[H]
 	\centering
@@ -1148,7 +1164,9 @@ Cette interface permet de lister les réactions d'un utilisateur connecté.
 	\caption{Code backend du controller de listing des réactions chimiques}
 \end{figure}
 
-Il est question ici du code backend permettant la recupération en base de données des réactions chimiques créé par l'utilisateur connecté afin de les communiquer à l'interface pour un rendu.
+Le code ci-dessous présente le teste unitaire de la fonctionnalité de listing des réactions chimiques.
+
+Ce teste unitaire permet de s'assuser que toutes les réponses aux requêtes de listing des réactions chimiques sur le serveur soient des réponses de type succès et que le contenu de la réponse soit une liste de réaction chimique.
 
 \begin{figure}[H]
 	\centering
@@ -1156,7 +1174,7 @@ Il est question ici du code backend permettant la recupération en base de donn�
 	\caption{Code backend du test unitaire du cas d'utilisation de la listing des réactions chimiques}
 \end{figure}
 
-Il est question ici du code de test unitaire de la fonctionnalités de listing des réactions chimiques.
+La figure ci-dessous présente le résultat du teste unitaire du cas d'utilisation de listing des réactions chimiques et revèle que le teste est concluent.
 
 \begin{figure}[H]
 	\centering
@@ -1164,14 +1182,12 @@ Il est question ici du code de test unitaire de la fonctionnalités de listing d
 	\caption{Resultat du test unitaire de la fonctionnalités de listing des réactions chimiques}
 \end{figure}
 
-Nous avons ici le resultat du test unitaire de la fonctionnalités de listing des réactions chimiques, qui s'avère concluent.
-
 \subsubsection{Code source frontend}
+
+La figure ci-dessous présente le code qui a permis la création de l'interface de listing des réactions chimiques.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{img/frl}
 	\caption{Code frontend du cas d'utilisation de la listing des réactions chimiques}
 \end{figure}
-
-Il est question ici du code React permettant le rendu de la page de listing des réactions chimiques.
