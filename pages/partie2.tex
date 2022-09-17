@@ -1,4 +1,4 @@
-\part{ÉTUDE ET RÉALISATION}
+\part{ÉTUDE DÉTAILLÉE ET RÉALISATION}
 
 \chapter{Cadrage, analyse et conception}
 
@@ -257,7 +257,7 @@ Ce diagramme présente le planning général du projet, fait en utilisant le log
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1.3\textwidth, angle=-90]{img/gantt}
+	\includegraphics[width=1.3\textwidth, height=0.7\textheight, angle=-90]{img/gantt}
 	\caption{Diagramme de gantt du projet}
 	\label{fig:mesh1}
 \end{figure}
@@ -380,12 +380,42 @@ Les diagrammes de cas d'utilisation sont des diagrammes utilisés pour une repr�
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[trim={10cm 0 0 0}, width=1\textwidth]{img/ucd}
+	\includegraphics[width=1.3\textwidth, height=0.7\textheight, angle=-90]{img/ucd}
 	\caption{Diagramme des cas d’utilisation}
 	\label{fig:mesh1}
 \end{figure}
 
 De ce diagramme ressortent les différents groupes de fonctionnalités du module de chimie de l’application VREDU à savoir :  le module de gestion des utilisateurs qui permettra la gestion des comptes utilisateur (administrateur et enseignant), le module de gestion des éléments chimique qui permettra les opérations de création, modification. Activation et désactivation des éléments chimiques, le module de gestion des réactions chimiques et le module de gestion du matériel de laboratoire.
+
+Chaque acteur de ce diagramme a certaines interactions bien spécifiques avec chaque module de l'application, interactions mieux illustrées dans les différents diagrammes des cas d'utilisations séparés par utilisateur suivants :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{img/aucd}
+	\caption{Diagramme des cas d’utilisation d'un administrateur}
+	\label{fig:mesh1}
+\end{figure}
+
+La figure ci-dessus présente l'administrateur et tous ses cas d'utilisation de la plateforme regroupé par module. Nous constatons que le champ d'action de l'administrateur s'étend aux modules de gestion des utilisateurs, des éléments chimiques, du matériel, mais aussi aux différents cas d'utilisation liés à un enseignant.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{img/tucd}
+	\caption{Diagramme des cas d’utilisation d'un enseignant}
+	\label{fig:mesh1}
+\end{figure}
+
+La figure ci-dessus présente l'enseignant et tous ses cas d'utilisation de la plateforme regroupé par module. Nous constatons que le champ d'action d'un enseignant s'étend aux modules de gestion des utilisateurs, des éléments chimiques et des réactions chimiques.
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics{img/sucd}
+	\caption{Diagramme des cas d’utilisation d'un apprenant}
+	\label{fig:mesh1}
+\end{figure}
+
+La figure ci-dessus présente l'apprenant et tous ses cas d'utilisation de la plateforme regroupé par module. Nous constatons que le champ d'action d'un apprenant ne se limite qu'au module des réactions chimiques et uniquement au cas d'utilisation "effectuer une réaction chimique".
 
 \subsubsection{Description textuelle de quelques cas d’utilisation}
 
@@ -730,7 +760,8 @@ Le diagramme de classes est un schéma utilisé pour présenter les classes et l
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[trim={5cm 0 0 0}, width=1\textwidth]{img/dc}
+	%\includegraphics[trim={5cm 0 0 0}, width=1\textwidth]{img/dc}
+	\includegraphics[trim={5cm 0 0 0}, width=1.2\textwidth, height=0.7\textheight]{img/dc}
 	\caption{Diagramme de classe du système}
 	\label{fig:mesh1}
 \end{figure}
