@@ -4,7 +4,7 @@
 
 \textit{Comme tout problème qui a été clairement défini, il faut le réaliser, mais nous ne pouvons
 	parler d’implémentation sans toutefois faire une analyse et une conception. Pour ce faire,
-	nous allons cadrer le projet en utilisant la méthode CPS, suivi d’une analyse
+	nous allons cadrer le projet en utilisant la méthode  du \ac{cps}, suivi d’une analyse
 	fonctionnelle et non fonctionnelle et bien sûr terminer par une conception des architectures
 	physique et logique.}
 
@@ -80,7 +80,7 @@ L’application doit être réalisée dans un délai de sept mois à compter de 
 	      \begin{enumerate}
 		      \item \textbf{La méthode descendante} : reste extrêmement populaire dans la gestion de projets contemporains. L'expression « top-down » (descendante) signifie que les instructions sont données en amont. Les objectifs du projet sont fixés par la direction.
 		      \item \textbf{La méthode ascendante} : elle se caractérise par une participation proactive de l'équipe dans le processus d'exécution du projet. Les membres de l'équipe sont invités à participer à toutes les étapes du processus de gestion. L'ensemble de l'équipe est amené à décider de la marche à suivre.
-		      \item \textbf{La méthode COCOMO} : (acronyme de l'anglais Constructive Cost Model) est un modèle permettant de définir une estimation de l'effort à fournir dans un développement logiciel et la durée que ce dernier aura en fonction des ressources allouées.
+		      \item \textbf{La méthode \ac{cocomo}} : est un modèle permettant de définir une estimation de l'effort à fournir dans un développement logiciel et la durée que ce dernier aura en fonction des ressources allouées.
 	      \end{enumerate}
 
 	      Sachant que la majeure partie du travail est consacrée à la production du logiciel, nous nous inspirons de la méthode COCOMO pour estimer les coûts de la ressource humaine à ce niveau, lesquels coûts seront inclus dans les coûts globaux de la solution envisagée.
@@ -96,7 +96,7 @@ L’application doit être réalisée dans un délai de sept mois à compter de 
 	      \end{enumerate}
 
 	      \begin{table}[h!]
-		      \caption {types de projet COCOMO}
+		      \caption {Types de projet COCOMO}
 		      \begin{tabularx}{\textwidth} {
 				      | >{\raggedright\arraybackslash}X
 				      | >{\centering\arraybackslash}X
@@ -217,11 +217,11 @@ En ce qui concerne la sécurité de l’application, vu que l’application sera
 
 \subsubsection{Grandes phases du planning}
 
-Pour la gestion du temps, il existe des méthodes de planification prévisionnelle de projet tel que le diagramme de Gantt. Ce dit diagramme regroupe toutes les tâches, les durées et les ressources ordonnées de manière graduelle permettant à toute l’équipe de suivre son évolution. Il peut être modifié au fur et à mesure en fonction des délais respectés ou pas ainsi que des imprévus. Dans le cadre de notre projet, la planification de nos tâches nous a permis de ressortir le diagramme de Gantt suivant :
+Pour la gestion du temps, il existe des méthodes de planification prévisionnelle de projet tel que le diagramme de \ac{gantt}. Ce dit diagramme regroupe toutes les tâches, les durées et les ressources ordonnées de manière graduelle permettant à toute l’équipe de suivre son évolution. Il peut être modifié au fur et à mesure en fonction des délais respectés ou pas ainsi que des imprévus. Dans le cadre de notre projet, la planification de nos tâches nous a permis de ressortir le diagramme de Gantt suivant :
 
 
 \begin{table}[H]
-	\caption{Estimation des coûts matériels}
+	\caption{Planification des tâches}
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{|lll|l|ll|}
 			\hline
@@ -731,14 +731,14 @@ Plusieurs techniques peuvent être utilisées pour réaliser d’une plateforme 
 		  Cette solution est longue, couteuse et rarement assez complète pour permettre une modification facile de l’application. 
 		  Aujourd’hui, la plupart des développeurs ne créent plus leur application de A à Z, ils utilisent des cadres de travail prédéfinis.
 
-	\item \textbf{Les CMS (Content management system) pour le web} :
+	\item \textbf{Les \ac{cms} pour le web} :
 
 	      Ce sont des aides à la création d’applications. 
 		  Ils ne font pas tous à votre place, mais vous aident en grande partie. 
 		  Il est très recommandé d’avoir des connaissances en informatique pour réaliser une application à partir d’un CMS. 
 		  Certains sont en effet très compliqués à mettre en place. 
 		  De plus, aucun hébergement n’est fourni avec le CMS. 
-		  Il faudra donc mettre en place un serveur HTTP pour héberger son application. 
+		  Il faudra donc mettre en place un serveur \ac{http} pour héberger son application. 
 		  Pour finir, la personnalisation du design d’une application sur un CMS est assez fastidieuse. 
 		  Il sera presque à tous les cas obligatoires de mettre la main dans le code source de   l’application. 
 		  D’autres techniques, existent notamment les Outils en ligne.
@@ -750,7 +750,7 @@ Plusieurs techniques peuvent être utilisées pour réaliser d’une plateforme 
 
 \subsubsection{Choix du Framework}
 
-\textbf{ASP.net} pour le \textbf{backend}, \textbf{React} pour le \textbf{frontend} et \textbf{unreal engine} pour la \textbf{3D}. Comme \textbf{SGBD}, nous allons utiliser \textbf{PostgreSQL} (le SGBD utilisé par l’entreprise).
+\textbf{ASP.net} pour le \textbf{backend}, \textbf{React} pour le \textbf{frontend} et \textbf{unreal engine} pour la \textbf{3D}. Comme \textbf{\ac{sgbd}}, nous allons utiliser \textbf{PostgreSQL} (le SGBD utilisé par l’entreprise).
 
 \section{Conception du système}
 
@@ -779,7 +779,7 @@ En UML, un diagramme de déploiement est une vue statique qui sert à représent
 	\label{fig:mesh1}
 \end{figure}
 
-\subsection{Quelques maquettes d'IHM (Interface Homme Machine)}
+\subsection{Quelques maquettes d'\ac{ihm}}
 
 \subsubsection{Page d'accueil}
 
@@ -1139,7 +1139,7 @@ La figure ci-dessous présente la définition du modèle d'une réaction chimiqu
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{img/mre}
-	\caption{Code backend du modèle de réaction}
+	\caption{Code backend du modèle de création des réactions chimiques}
 \end{figure}
 
 La figure ci-dessous présente le code backend du contrôleur des réactions chimiques, plus précisément la fonctionnalité de création des réactions chimiques.
